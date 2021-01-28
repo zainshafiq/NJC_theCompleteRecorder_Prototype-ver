@@ -182,7 +182,6 @@ class Library extends StatelessWidget {
                       'Button 1',
                       style: TextStyle(
                           color: Colors.white,
-                          //fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Roboto',
                           letterSpacing: 0.5),
