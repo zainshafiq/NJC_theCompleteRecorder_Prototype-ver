@@ -421,7 +421,7 @@ class Library extends StatelessWidget {
                             IconButton(
                               icon: Icon(Icons.folder_rounded),
                               iconSize: 80.0,
-                              color: Colors.pink[900],
+                              color: Colors.pinkAccent[400],
                               //highlightColor: Colors.grey,
                               splashColor: Colors.grey,
                               onPressed: () {
@@ -432,7 +432,7 @@ class Library extends StatelessWidget {
                             IconButton(
                               icon: Icon(Icons.folder_special_rounded),
                               iconSize: 80.0,
-                              color: Colors.pink[900],
+                              color: Colors.pinkAccent[400],
                               //highlightColor: Colors.grey,
                               splashColor: Colors.grey,
                               onPressed: () {
@@ -443,7 +443,7 @@ class Library extends StatelessWidget {
                             IconButton(
                               icon: Icon(Icons.folder_open_sharp),
                               iconSize: 80.0,
-                              color: Colors.pink[900],
+                              color: Colors.pinkAccent[400],
                               //highlightColor: Colors.grey,
                               splashColor: Colors.grey,
                               onPressed: () {
