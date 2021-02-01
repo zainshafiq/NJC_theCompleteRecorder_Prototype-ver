@@ -21,8 +21,8 @@ class Homepage extends StatelessWidget {
           title: Text(
             'THE COMPLETE RECORDER',
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 23.0,
+              color: Colors.cyanAccent,
+              fontSize: 22.0,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
               letterSpacing: 0.5,
@@ -421,7 +421,7 @@ class Library extends StatelessWidget {
                             IconButton(
                               icon: Icon(Icons.folder_rounded),
                               iconSize: 80.0,
-                              color: Colors.white70,
+                              color: Colors.pink[900],
                               //highlightColor: Colors.grey,
                               splashColor: Colors.grey,
                               onPressed: () {
@@ -432,7 +432,7 @@ class Library extends StatelessWidget {
                             IconButton(
                               icon: Icon(Icons.folder_special_rounded),
                               iconSize: 80.0,
-                              color: Colors.white70,
+                              color: Colors.pink[900],
                               //highlightColor: Colors.grey,
                               splashColor: Colors.grey,
                               onPressed: () {
@@ -443,7 +443,7 @@ class Library extends StatelessWidget {
                             IconButton(
                               icon: Icon(Icons.folder_open_sharp),
                               iconSize: 80.0,
-                              color: Colors.white70,
+                              color: Colors.pink[900],
                               //highlightColor: Colors.grey,
                               splashColor: Colors.grey,
                               onPressed: () {
