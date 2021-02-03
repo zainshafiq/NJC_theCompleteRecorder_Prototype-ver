@@ -330,7 +330,7 @@ class Library extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                'File ',
+                                'File 2',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15.0,
