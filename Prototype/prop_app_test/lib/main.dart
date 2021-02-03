@@ -179,7 +179,7 @@ class Library extends StatelessWidget {
                     color: Colors.black,
                     highlightColor: Colors.red,
                     child: Text(
-                      'Button 1',
+                      'Feature 1',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
