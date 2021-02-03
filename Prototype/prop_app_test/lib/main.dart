@@ -457,7 +457,7 @@ class Library extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               Text(
-                                'File 4',
+                                'File ',
                                 style: TextStyle(
                                     color: Colors.deepOrangeAccent,
                                     fontSize: 15.0,
