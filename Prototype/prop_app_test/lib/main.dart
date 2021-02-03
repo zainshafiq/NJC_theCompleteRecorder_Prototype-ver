@@ -570,7 +570,7 @@ class _RecordPageState extends State<Record>
               progress: _animationController,
               color: Colors.redAccent,
             ),
-            iconSize: 400,
+            iconSize: 200,
             splashColor: Colors.redAccent,
             onPressed: () => _handleOnPressed(),
           ),
