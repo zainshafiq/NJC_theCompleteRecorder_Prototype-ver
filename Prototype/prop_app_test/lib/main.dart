@@ -322,7 +322,7 @@ class Library extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               Text(
-                                'CLICK ME!',
+                                'File 1',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15.0,
@@ -330,7 +330,7 @@ class Library extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                'CLICK ME!',
+                                'File 2',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15.0,
@@ -338,7 +338,7 @@ class Library extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                'CLICK ME!',
+                                'File 3',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15.0,
