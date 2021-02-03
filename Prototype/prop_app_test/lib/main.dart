@@ -179,7 +179,7 @@ class Library extends StatelessWidget {
                     color: Colors.black,
                     highlightColor: Colors.red,
                     child: Text(
-                      'Button 1',
+                      'Button 4',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -196,7 +196,7 @@ class Library extends StatelessWidget {
                         borderRadius: new BorderRadius.circular(10.0),
                         side: BorderSide(color: Colors.white, width: 2.0)),
                     child: Text(
-                      'Button 2',
+                      'Button 5',
                       style: TextStyle(
                           color: Colors.white,
                           //fontSize: 20.0,
