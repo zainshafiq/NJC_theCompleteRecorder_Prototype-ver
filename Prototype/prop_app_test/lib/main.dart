@@ -473,7 +473,7 @@ class Library extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                'Нжи меня!',
+                                'File 6',
                                 style: TextStyle(
                                     color: Colors.deepOrangeAccent,
                                     fontSize: 15.0,
