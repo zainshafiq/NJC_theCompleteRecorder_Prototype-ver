@@ -622,7 +622,7 @@ class Folder extends StatelessWidget {
                     //this widget houses the elements inside the card widget
                     leading: IconButton(
                       icon: Icon(Icons.home_rounded),
-                      iconSize: 70.0,
+                      iconSize: 75.0,
                       color: Colors.white,
                       highlightColor: Colors.grey,
                       onPressed: () {
