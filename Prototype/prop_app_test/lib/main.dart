@@ -631,7 +631,7 @@ class Folder extends StatelessWidget {
                       },
                     ),
                     title: Text(
-                      'Search Here',
+                      'Search',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20.0,
