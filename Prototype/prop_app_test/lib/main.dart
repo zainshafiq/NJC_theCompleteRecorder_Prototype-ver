@@ -641,7 +641,7 @@ class Folder extends StatelessWidget {
                     ),
                     trailing: IconButton(
                       icon: Icon(Icons.create_new_folder_outlined),
-                      iconSize: 40.0,
+                      iconSize: 30.0,
                       color: Colors.white,
                       highlightColor: Colors.grey,
                       onPressed: () {
