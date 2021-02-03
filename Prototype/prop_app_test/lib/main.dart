@@ -406,7 +406,7 @@ class Library extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                '클릭 세요!',
+                                'File ',
                                 style: TextStyle(
                                     color: Colors.blue[200],
                                     fontSize: 15.0,
