@@ -550,7 +550,7 @@ class _RecordPageState extends State<Record>
       backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(
-          'Recording',
+          'Recording Studio',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20.0,
