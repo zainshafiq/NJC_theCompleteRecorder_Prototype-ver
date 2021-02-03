@@ -390,7 +390,7 @@ class Library extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               Text(
-                                'File 4',
+                                'File ',
                                 style: TextStyle(
                                     color: Colors.blue[200],
                                     fontSize: 15.0,
