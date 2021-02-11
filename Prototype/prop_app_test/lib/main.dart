@@ -14,7 +14,7 @@ class Homepage extends StatelessWidget {
       //Accessing the home of the material widget and drawing the scaffold onto it
       home: Scaffold(
         backgroundColor:
-        Colors.black, //the background color of the scaffold is white
+        Colors.black, //the background color of the scaffold is black
         appBar: AppBar(
           backgroundColor: Colors.pink[900],    //grey[600],
           centerTitle: true,
