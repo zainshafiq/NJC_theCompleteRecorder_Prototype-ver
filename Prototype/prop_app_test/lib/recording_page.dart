@@ -8,6 +8,6 @@ class RecordingPage extends StatefulWidget {
 class _RecordingPageState extends State<RecordingPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return null;
   }
 }
