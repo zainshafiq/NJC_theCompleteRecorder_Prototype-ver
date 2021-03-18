@@ -1,54 +1,7 @@
 
-class RecordPage extends StatefulWidget {
-  final Function onSaved;
 
-  const RecordPage({Key key, @required this.onSaved}) : super(key: key);
-  @override
-  _RecordPageState createState() => _RecordPageState();
-}
 
-//checks on recording state
-enum RecordingState {
-  /// Recording not initialized
-  UnSet,
 
-  /// Ready for start recording
-  Set,
-
-  /// Currently recording
-  Recording,
-
-  /// This specific recording Stopped, cannot be start again
-  Stopped,
-}
-
-class _RecordPageState extends State<RecordPage> {
-  IconData _recordIcon = Icons.mic_none;
-  String _recordText = 'Click to start';
-  RecordingState _recordingState = RecordingState.UnSet;
-
-  //Recorder Properties
-  FlutterAudioRecorder audioRecorder;
-
-  @override
-  void initState() {
-    super.initState();
-
-    FlutterAudioRecorder.hasPermissions.then((hasPermission) {
-      if (hasPermission) {
-        _recordingState = RecordingState.Set;
-        _recordIcon = Icons.mic;
-        _recordText = 'Record';
-      }
-    });
-  }
-
-  @override
-  void dispose() {
-    _recordingState = RecordingState.UnSet;
-    audioRecorder = null;
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
