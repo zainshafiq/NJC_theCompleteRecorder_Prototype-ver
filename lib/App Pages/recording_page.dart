@@ -1,7 +1,60 @@
+// TODO Implement this library.
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:complete_recorder/App Pages/record_list.dart';
 
+class RecordPage extends StatefulWidget {
+  final Function onSaved;
 
+  const RecordPage({Key key, @required this.onSaved}) : super(key: key);
+  @override
+  _RecordPageState createState() => _RecordPageState();
+}
 
+//checks on recording state
+enum RecordingState {
+  /// Recording not initialized
+  UnSet,
 
+  /// Ready for start recording
+  Set,
+
+  /// Currently recording
+  Recording,
+
+  /// This specific recording Stopped, cannot be start again
+  Stopped,
+}
+
+class _RecordPageState extends State<RecordPage> {
+  IconData _recordIcon = Icons.mic_none;
+  String _recordText = 'Click to start';
+  RecordingState _recordingState = RecordingState.UnSet;
+
+  //Recorder Properties
+  FlutterAudioRecorder audioRecorder;
+
+  @override
+  void initState() {
+    super.initState();
+
+    FlutterAudioRecorder.hasPermissions.then((hasPermission) {
+      if (hasPermission) {
+        _recordingState = RecordingState.Set;
+        _recordIcon = Icons.mic;
+        _recordText = 'Record';
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _recordingState = RecordingState.UnSet;
+    audioRecorder = null;
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +67,15 @@
             borderRadius: BorderRadius.vertical(
               top: Radius.circular(50),
             ),
-            gradient: new LinearGradient(
-              colors: [Colors.purple[800], Colors.red[800]],
-            ),
+            color: Color(0xFF111328),
+            // gradient: new LinearGradient(
+            //   colors: [Color.deepPurple[900]],
+            // ),
             boxShadow: [
               BoxShadow(
-                offset: const Offset(3.0, 3.0),
+                color: Colors.grey,
                 blurRadius: 7.0,
-                spreadRadius: 3.0,
+                spreadRadius: 2.0,
               ),
             ]),
         child: Stack(
@@ -35,20 +89,20 @@
                     boxShadow: [
                       BoxShadow(
                         color: Colors.white,
-                        blurRadius: 7.0,
+                        blurRadius: 5.0,
                         spreadRadius: 4.0,
                       ),
                     ]),
                 child: RaisedButton(
-                  color: Colors.red,
+                  color: Colors.red[700],
                   onPressed: () async {
                     await _onRecordButtonPressed();
                     setState(() {});
                   },
                   shape: CircleBorder(
-                      //borderRadius: BorderRadius.circular(30),
-                      //side: BorderSide(color: Colors.white, width: 2.0)
-                      ),
+                    //borderRadius: BorderRadius.circular(30),
+                    //side: BorderSide(color: Colors.white, width: 2.0)
+                  ),
                   child: Container(
                     width: 150,
                     height: 150,
@@ -64,15 +118,15 @@
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                child: Text(
-                  _recordText,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15.0,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.bold),
-                ),
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 5)
+                  child: Text(
+                    _recordText,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15.0,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.bold),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 5)
               ),
             )
           ],
@@ -91,7 +145,7 @@
         await _stopRecording();
         _recordingState = RecordingState.Stopped;
         _recordIcon = Icons.mic;
-        _recordText = 'Record new one';
+        _recordText = 'Record';
         break;
 
       case RecordingState.Stopped:
@@ -143,7 +197,9 @@
   _stopRecording() async {
     await audioRecorder.stop();
     widget.onSaved();
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => SplashScreenRecording()));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => RecordList()));
   }
 }
