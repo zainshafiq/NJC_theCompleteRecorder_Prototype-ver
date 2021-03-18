@@ -1,9 +1,3 @@
-// TODO Implement this library.
-import 'dart:io';
-import 'package:flutter/material.dart';
-import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:complete_recorder/App%20Pages/splash_screen_recording.dart';
 
 class RecordPage extends StatefulWidget {
   final Function onSaved;
