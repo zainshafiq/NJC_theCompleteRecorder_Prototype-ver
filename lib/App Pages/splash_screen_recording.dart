@@ -13,13 +13,6 @@ class SplashScreenRecording extends StatefulWidget {
 
 class _SplashScreenRecordingState extends State<SplashScreenRecording> {
 
-  @override
-  void initState() {
-    super.initState();
-
-    _loadWidget();
-  }
-
   _loadWidget() async {
     var _duration = Duration(seconds: 2);
     return Timer(_duration, navigationPage);
